@@ -1,0 +1,18 @@
+spring.mvc.static-path-pattern: /**
+token.id: 10001
+admin.desc: "山东派蒙平台管理员"
+admin.username: sdpm
+admin.password: sdpm@8667!
+admin.url: "http://promote-autocloud.com:88"
+spring:
+  jpa:
+    properties:
+      hibernate:
+        # https://stackoverflow.com/questions/25362831/solve-hibernate-lazy-init-issue-with-hibernate-enable-lazy-load-no-trans
+        enable_lazy_load_no_trans: true
+#        # 解决Multiple representations of the same entity [XXX#1] are being merged.错误
+        event:
+          merge:
+            entity_copy_observer: allow
+  profiles:
+    active: dev

@@ -1,0 +1,8 @@
+#!/bin/sh
+export AppName="SmartFaringSecurity"
+export Package="com.sdpm.sf.security"
+export UserName="root"
+export JavaOpts="-Xmx400m -Xms256m"
+bin=`dirname "$0"`
+bin=`cd "$bin"; pwd`
+"$bin"/daemon.sh "$0" "$@"

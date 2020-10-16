@@ -1,0 +1,22 @@
+spring:
+  #配置数据库
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://154.8.222.152:3306/smart_farming_security?useSSL=false&characterEncoding=utf-8&createDatabaseIfNotExist=true
+    username: root
+    password: sdpm@1234!
+  #配置jpa
+  jpa:
+    show-sql: true
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+server:
+  servlet:
+    context-path:
+  port: 18811
+
+logging.level.org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+
+
